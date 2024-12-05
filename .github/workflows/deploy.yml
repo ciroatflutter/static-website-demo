@@ -50,6 +50,7 @@ jobs:
           clean: false
       - name: Build release
         run: |
+          bundle install
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
           cp ./release/._site ../_site/release
         working-directory: ./release
