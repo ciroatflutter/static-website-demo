@@ -66,8 +66,8 @@ jobs:
   # Deployment job
   deploy:
     environment:
-      name: ${{ github.ref == 'refs/heads/main' && 'github-pages' || 'preview' }}
-      url: ${{ github.ref == 'refs/heads/main' && steps.deployment.outputs.page_url || format('{0}/preview', steps.deployment.outputs.page_url) }}
+      name: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+      url: ${{ github.ref == 'refs/heads/main' && steps.deployment.outputs.page_url || format('{0}preview', steps.deployment.outputs.page_url) }}
     runs-on: ubuntu-latest
     needs: build
     steps:
