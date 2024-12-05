@@ -50,8 +50,7 @@ jobs:
       - name: Build release
         run: |
           bundle install
-          yq -i '.baseurl = "/preview"' ./_config.yml
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/preview"
           mkdir ../_site/preview
           cp -r ./_site/* ../_site/preview
         working-directory: ./release
