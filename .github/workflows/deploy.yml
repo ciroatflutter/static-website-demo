@@ -47,6 +47,7 @@ jobs:
         with:
           ref: release
           path: release
+          clean: false
       - name: Build release
         run: |
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
