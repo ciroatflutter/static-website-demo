@@ -47,12 +47,12 @@ jobs:
         with:
           ref: release
           path: release
-          clean: false
       - name: Build release
         run: |
           bundle install
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          cp ./release/_site ../_site/release
+          mkdir ../_site/release
+          cp -r ./_site/* ../_site/release
         working-directory: ./release
         env:
           JEKYLL_ENV: production
