@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A new post is born"
+title:  "A new post was born"
 date:   2024-12-04 14:56:59 +0000
 categories: jekyll update
 ---
