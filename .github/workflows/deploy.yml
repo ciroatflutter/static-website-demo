@@ -50,9 +50,9 @@ jobs:
       - name: Build release
         run: |
           bundle install
-          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
-          mkdir ../_site/release
-          cp -r ./_site/* ../_site/release
+          bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}/preview"
+          mkdir ../_site/preview
+          cp -r ./_site/* ../_site/preview
         working-directory: ./release
         env:
           JEKYLL_ENV: production
