@@ -16,3 +16,9 @@ You can find the source code for Jekyll at GitHub:
 
 
 [jekyll-organization]: https://github.com/jekyll
+
+
+![C4 from bet lifecycle](https://raw.githubusercontent.com/Flutter-Global/cap-bet-lifecycle/refs/heads/master/docs/architecture/img/bet_tracking_c4_context.svg)
+
+and
+![with raw true](https://github.com/Flutter-Global/cap-bet-lifecycle/blob/master/docs/architecture/img/bet_tracking_c4_context.svg?raw=true)
